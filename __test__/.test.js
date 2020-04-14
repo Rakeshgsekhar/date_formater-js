@@ -1,7 +1,8 @@
-export const formateDate = (date, mode) => {};
 
-export const currentDateFormater = (mode) => {
-  let currnetDate = new Date();
+//import {currentDateFormater} from '../src';
+
+const currentDateFormater=(mode)=>{
+    let currnetDate = new Date();
   let month = ("0" + (currnetDate.getMonth() + 1)).slice(-2);
   let day = ("0" + currnetDate.getDate()).slice(-2);
   let year = "" + currnetDate.getFullYear();
@@ -22,18 +23,10 @@ export const currentDateFormater = (mode) => {
   let formateddate = "";
   switch (mode) {
     case "DDMMMYYYY": {
-      formateddate = day + " " + months[currnetDate.getMonth()].slice(3) + " " + year;
+      formateddate = day + " " + months[currnetDate.getMonth()].slice(0,3) + " " + year;
       return formateddate;
-	}
-	case "DDMONTHYYYY": {
-		formateddate = day + " " + months[currnetDate.getMonth()] + " " + year;
-		return formateddate;
-	  }
-	  case "DD-MM-YYYY": {
-		formateddate = day + " " + month + " " + year;
-		return formateddate;
-	  }
-	  case "DD-MM-YY": {
+    }
+    case "DD-MM-YY": {
 		formateddate = day + "-" + month + "-" + year.slice(-2);
 		return formateddate;
 	  }
@@ -41,7 +34,10 @@ export const currentDateFormater = (mode) => {
 		return "invalid mode";
 	}
   }
-};
-
-
-//console.log(currentDateFormater("DDMMMYYYY"))
+}
+describe('date format testing',()=>{
+    it('date test',()=>{
+        expect(currentDateFormater("DDMMMYYYY")).toBe("14 APR 2020");
+        expect(currentDateFormater("DD-MM-YY")).toBe("14-04-20")
+    })
+})
