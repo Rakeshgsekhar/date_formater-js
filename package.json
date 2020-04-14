@@ -1,0 +1,25 @@
+{
+  "name": "date_formater-js",
+  "version": "1.0.0",
+  "description": "An npm package for easy date formate conversion.",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rakeshgsekhar/date_formater-js.git"
+  },
+  "keywords": [
+"npm",
+"node",
+"date formater",
+"javascript"
+],
+  "author": "WebOxStreams",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Rakeshgsekhar/date_formater-js/issues"
+  },
+  "homepage": "https://github.com/Rakeshgsekhar/date_formater-js#readme"
+}
