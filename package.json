@@ -6,7 +6,7 @@
   "scripts": {
     "build": "babel ./src -d ./lib",
     "lint": "eslint ./src",
-    "test": "jest"
+    "test": "mocha --require babel-core/register"
   },
   "repository": {
     "type": "git",
@@ -26,10 +26,14 @@
   "homepage": "https://github.com/Rakeshgsekhar/date_formater-js#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "eslint": "^6.8.0",
-    "jest": "^25.3.0",
-    "mocha": "^7.1.1"
+    "babel-plugin-istanbul": "^4.1.5",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.13.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "mocha": "^4.0.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "assert": "^2.0.0"
+  }
 }
