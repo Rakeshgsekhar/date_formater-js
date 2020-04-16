@@ -45,6 +45,14 @@ export const formateDate = (date,code) => {
       formateddate = days[currnetDate.getDay()].slice(0,3)+" "+months[currnetDate.getMonth()]+","+day+" "+year;
       return formateddate
     }
+    case "DAY":{
+      formateddate = days[currnetDate.getDay()];
+      return formateddate
+    }
+    case "MONTH":{
+      formateddate = months[currnetDate.getMonth()];
+      return formateddate
+    }
 	default:{
 		return "invalid Conversion code";
 	}

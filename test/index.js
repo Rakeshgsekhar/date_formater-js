@@ -14,5 +14,7 @@ describe('date format testing',()=>{
         assert.equal(formateDate("2020-04-15","LONGFULL"),"Wednesday APRIL,15 2020");
         assert.equal(formateDate("2020-04-15","LONG"),"Wed APRIL,15 2020");
         assert.equal(formateDate("2020-04-15","DDDMMMYYYY"),"invalid Conversion code");
+        assert.equal(formateDate("2020-04-15","DAY"),"Wednesday");
+        assert.equal(formateDate("2020-04-15","MONTH"),"APRIL");
     })
 })

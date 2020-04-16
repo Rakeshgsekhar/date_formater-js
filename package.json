@@ -1,13 +1,12 @@
 {
   "name": "date_formater-js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An npm package for easy date formate conversion.",
   "main": "build/index.js",
   "scripts": {
     "build": "babel ./src -d ./lib",
     "lint": "eslint ./src",
-    "test": "nyc mocha --require babel-core/register",
-    "prepublishOnly": "npm run build"
+    "test": "nyc mocha --require babel-core/register"
   },
   "repository": {
     "type": "git",
