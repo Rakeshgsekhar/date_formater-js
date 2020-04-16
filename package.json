@@ -6,7 +6,8 @@
   "scripts": {
     "build": "babel ./src -d ./lib",
     "lint": "eslint ./src",
-    "test": "mocha --require babel-core/register"
+    "test": "mocha --require babel-core/register",
+    "start":"node App.js"
   },
   "repository": {
     "type": "git",

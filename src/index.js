@@ -1,7 +1,7 @@
-export const formateDate = (date, mode) => {};
 
-export const currentDateFormater = (date,mode) => {
-  let currnetDate = (date ===null)? new Date():new Date(date);
+
+export const formateDate = (date,mode) => {
+  let currnetDate = (date === null)? new Date():new Date(date);
   let month = ("0" + (currnetDate.getMonth() + 1)).slice(-2);
   let day = ("0" + currnetDate.getDate()).slice(-2);
   let year = "" + currnetDate.getFullYear();
@@ -30,16 +30,20 @@ export const currentDateFormater = (date,mode) => {
 		return formateddate;
 	  }
 	  case "DD-MM-YYYY": {
-		formateddate = day + " " + month + " " + year;
+		formateddate = day + "-" + month + "-" + year;
 		return formateddate;
 	  }
 	  case "DD-MM-YY": {
 		formateddate = day + "-" + month + "-" + year.slice(-2);
 		return formateddate;
     }
-    case " DAY MONTH, DATE YEAR":{
-      formatedDate = days[currnetDate.getDay()]+" "+months[currnetDate.getMonth()]+","+day+" "+year;
-      return formatedDate
+    case "LONGFULL":{
+      formateddate = days[currnetDate.getDay()]+" "+months[currnetDate.getMonth()]+","+day+" "+year;
+      return formateddate
+    }
+    case "LONG":{
+      formateddate = days[currnetDate.getDay()].slice(0,3)+" "+months[currnetDate.getMonth()]+","+day+" "+year;
+      return formateddate
     }
 	default:{
 		return "invalid mode";
