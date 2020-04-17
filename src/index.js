@@ -59,5 +59,5 @@
   }
 };
 
-exports.default = formateDate;
+export default formateDate;
 //console.log(currentDateFormater("DDMMMYYYY"))
