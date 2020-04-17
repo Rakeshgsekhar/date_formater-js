@@ -1,6 +1,6 @@
 
 
- const formateDate = (date,code) => {
+function formateDate (date,code) {
   let currnetDate = (date === null)? new Date():new Date(date);
   let month = ("0" + (currnetDate.getMonth() + 1)).slice(-2);
   let day = ("0" + currnetDate.getDate()).slice(-2);
@@ -59,5 +59,5 @@
   }
 };
 
-export default formateDate;
+exports.default = formateDate;
 //console.log(currentDateFormater("DDMMMYYYY"))
