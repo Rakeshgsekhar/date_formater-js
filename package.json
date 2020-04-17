@@ -1,22 +1,23 @@
 {
   "name": "date_formater-js",
-  "version": "1.0.1",
-  "description": "An npm package for easy date formate conversion.",
+  "version": "1.0.2",
+  "description": "A NPM package that exports functions to date formate Conversion.",
   "main": "build/index.js",
   "scripts": {
-    "build": "babel ./src -d ./lib",
+    "build": "npm run lint && babel ./src -d ./lib",
     "lint": "eslint ./src",
-    "test": "nyc mocha --require babel-core/register"
+    "test": "nyc mocha --require babel-core/register",
+    "dev": "node App.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Rakeshgsekhar/date_formater-js.git"
   },
   "keywords": [
+    "node.js",
+    "javascript",
     "npm",
-    "node",
-    "date formater",
-    "javascript"
+    "date_formater"
   ],
   "author": "WebOxStreams",
   "license": "MIT",
@@ -27,12 +28,19 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-plugin-istanbul": "^4.1.5",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "babel-preset-env": "^1.6.1",
     "eslint": "^4.13.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
     "mocha": "^4.0.1",
-    "nyc": "^15.0.1"
+    "nyc": "^11.3.0"
+  },
+  "nyc": {
+    "reporter": [
+      "lcov",
+      "text"
+    ]
   },
   "dependencies": {
     "assert": "^2.0.0"

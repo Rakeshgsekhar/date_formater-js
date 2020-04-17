@@ -1,6 +1,6 @@
 
 import * as assert from 'assert';
-import {formateDate} from '../src/index';
+import formateDate from '../src/index';
 
 
 describe('date format testing',()=>{
