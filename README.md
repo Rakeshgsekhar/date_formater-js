@@ -9,6 +9,7 @@ Input can be provided in the format YYYY-MM-DD and for current date conversion e
 
     
     # Input Formate => formateDate(date,mode) => formateDate("2020-04-15","DD-MM-YYYY")
+
 available modes and output
 
 |MODE         |   OUTPUT                  |
@@ -25,9 +26,10 @@ available modes and output
   # USAGE
   add to your package.json => "date_formater-js":2.0.1  or run npm install date_formater-js
   
-  const date_formater = require('date_formater-js')
-  const date = date_formater.formateDate(null,"DDMMMYYYY");
+  # const date_formater = require('date_formater-js')
   
+  # const date = date_formater.formateDate(null,"DDMMMYYYY"); 
+  **************************************************************
   # sample
   formateDate("2020-04-16","DDMMMYYYY")  will return date in formate 16 APR 2020
   
