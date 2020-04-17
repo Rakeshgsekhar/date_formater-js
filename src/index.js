@@ -59,5 +59,5 @@ function formateDate (date,code) {
   }
 };
 
-exports.default = formateDate;
+exports.formateDate =formateDate;
 //console.log(currentDateFormater("DDMMMYYYY"))
