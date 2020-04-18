@@ -1,4 +1,4 @@
-# date_formater-js 2.0.1
+# date_formater-js 2.0.2
 An npm package for easy date formate conversion.
 
 This package enable you to convert date to different formats.
@@ -24,7 +24,7 @@ available modes and output
 |MONTH        |   APRIL                   |
 
   # USAGE
-  add to your package.json => "date_formater-js":2.0.1  or run npm install date_formater-js
+  add to your package.json => "date_formater-js":2.0.2  or run npm install date_formater-js
   
   # const date_formater = require('date_formater-js')
   
