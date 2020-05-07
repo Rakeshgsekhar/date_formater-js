@@ -4,6 +4,7 @@ import {formateDate} from '../src/index';
 
 
 describe('date format testing',()=>{
+    let currentdate ='';
     it('date test',()=>{
        // assert.equal(formateDate(null,"DDMMMYYYY"),"16 APR 2020");
        // assert.equal(formateDate(new Date(),"DD-MM-YY"),"16-04-20");
@@ -16,5 +17,10 @@ describe('date format testing',()=>{
         assert.equal(formateDate("2020-04-15","DDDMMMYYYY"),"invalid Conversion code");
         assert.equal(formateDate("2020-04-15","DAY"),"Wednesday");
         assert.equal(formateDate("2020-04-15","MONTH"),"APRIL");
+        let today = new Date();
+        currentdate = formateDate(today,"DD-MM-YY");
+        assert.equal(formateDate(null,"DD-MM-YY"),currentdate);
+        
+
     })
 })
