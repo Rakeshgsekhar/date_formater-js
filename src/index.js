@@ -1,63 +1,66 @@
 
 
-function formateDate (date,code) {
-  let currnetDate = (date === null)? new Date():new Date(date);
-  let month = ("0" + (currnetDate.getMonth() + 1)).slice(-2);
-  let day = ("0" + currnetDate.getDate()).slice(-2);
-  let year = "" + currnetDate.getFullYear();
+function formatDate (date,format) {
+  let currentDate = (date === null)? new Date():new Date(date);
+  let month = ("0" + (currentDate.getMonth() + 1)).slice(-2);
+  let day = ("0" + currentDate.getDate()).slice(-2);
+  let year = "" + currentDate.getFullYear();
   const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
   const months = [
-    "JANUARY",
-    "FEBRUARY",
-    "MARCH",
-    "APRIL",
-    "JUNE",
-    "JULY",
-    "AUGUST",
-    "SEPTEMBER",
-    "OCTOBER",
-    "NOVEMBER",
-    "DECEMBER",
+    "January",
+    "February",
+    "March",
+    "April",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
   ];
-  let formateddate = "";
-  switch (code) {
+  let formattedDate = "";
+  switch (format) {
+    case "DDMmmYYYY": {
+      formattedDate = day + " " + months[currentDate.getMonth()].slice(0,3) + " " + year;
+      return formattedDate;
+    }
     case "DDMMMYYYY": {
-      formateddate = day + " " + months[currnetDate.getMonth()].slice(0,3) + " " + year;
-      return formateddate;
-	}
-	case "DDMONTHYYYY": {
-		formateddate = day + " " + months[currnetDate.getMonth()] + " " + year;
-		return formateddate;
+      formattedDate = day + " " + months[currentDate.getMonth()].slice(0,3).toUpperCase() + " " + year;
+      return formattedDate;
+    }
+    case "DDMonthYYYY": {
+      formattedDate = day + " " + months[currentDate.getMonth()] + " " + year;
+      return formattedDate;
 	  }
 	  case "DD-MM-YYYY": {
-		formateddate = day + "-" + month + "-" + year;
-		return formateddate;
+      formattedDate = day + "-" + month + "-" + year;
+      return formattedDate;
 	  }
 	  case "DD-MM-YY": {
-		formateddate = day + "-" + month + "-" + year.slice(-2);
-		return formateddate;
+      formattedDate = day + "-" + month + "-" + year.slice(-2);
+      return formattedDate;
     }
     case "LONGFULL":{
-      formateddate = days[currnetDate.getDay()]+" "+months[currnetDate.getMonth()]+","+day+" "+year;
-      return formateddate
+      formattedDate = days[currentDate.getDay()]+" "+months[currentDate.getMonth()]+","+day+" "+year;
+      return formattedDate
     }
     case "LONG":{
-      formateddate = days[currnetDate.getDay()].slice(0,3)+" "+months[currnetDate.getMonth()]+","+day+" "+year;
-      return formateddate
+      formattedDate = days[currentDate.getDay()].slice(0,3)+" "+months[currentDate.getMonth()]+","+day+" "+year;
+      return formattedDate
     }
     case "DAY":{
-      formateddate = days[currnetDate.getDay()];
-      return formateddate
+      formattedDate = days[currentDate.getDay()];
+      return formattedDate
     }
     case "MONTH":{
-      formateddate = months[currnetDate.getMonth()];
-      return formateddate
+      formattedDate = months[currentDate.getMonth()];
+      return formattedDate
     }
 	default:{
-		return "invalid Conversion code";
+		return "Invalid conversion code";
 	}
   }
 };
 
-exports.formateDate =formateDate;
-//console.log(currentDateFormater("DDMMMYYYY"))
+exports.formatDate =formatDate;
