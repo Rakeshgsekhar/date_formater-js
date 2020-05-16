@@ -1,4 +1,4 @@
-# date_formater-js 2.0.2
+# date_formater-js 2.0.3
 An npm package for easy date formate conversion.
 
 This package enable you to convert date to different formats.
@@ -17,11 +17,12 @@ available modes and output
 |DD-MM-YYYY   |   15-04-2020              |
 |DD-MM-YY     |   15-04-20                |
 |DDMMMYYYY    |   15 APR 2020             |
-|DDMONTHYYYY  |   15 APRIL 2020           |
-|LONGFULL     |   Wednesday APRIL,15 2020 |
-|LONG         |   Wed APRIL,15 2020       |
+|DDMonthYYYY  |   15 April 2020           |
+|LONGFULL     |   Wednesday April,15 2020 |
+|LONG         |   Wed April,15 2020       |
 |DAY          |   Wednesday               |
-|MONTH        |   APRIL                   |
+|MONTH        |   April                   |
+|DDMmmYYYY    |   15 Apr 2020             |
 
   # USAGE
   add to your package.json => "date_formater-js":2.0.2  or run npm install date_formater-js
@@ -31,7 +32,7 @@ available modes and output
   # const date = date_formater.formateDate(null,"DDMMMYYYY"); 
   **************************************************************
   # sample
-  formateDate("2020-04-16","DDMMMYYYY")  will return date in formate 16 APR 2020
+  formatDate("2020-04-16","DDMMMYYYY")  will return date in formate 16 APR 2020
   
   # for converting current Date 
-  formateDate(null,"DDMMMYYYY") or formateDate(new Date(),"DDMMMYYYY")  # can be used
+  formatDate(null,"DDMMMYYYY") or formatDate(new Date(),"DDMMMYYYY")  # can be used

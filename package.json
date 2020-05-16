@@ -1,6 +1,6 @@
 {
   "name": "date_formater-js",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "A NPM package that exports functions to date formate Conversion.",
   "main": "build/index.js",
   "scripts": {
@@ -27,14 +27,14 @@
   "homepage": "https://github.com/Rakeshgsekhar/date_formater-js#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-plugin-istanbul": "^4.1.5",
+    "babel-plugin-istanbul": "^6.0.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "babel-preset-env": "^1.6.1",
     "eslint": "^4.13.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
-    "mocha": "^4.0.1",
-    "nyc": "^11.3.0"
+    "mocha": "^7.1.2",
+    "nyc": "^15.0.1"
   },
   "nyc": {
     "reporter": [
