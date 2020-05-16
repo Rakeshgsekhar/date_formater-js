@@ -8,7 +8,7 @@ Available formats :
 Input can be provided in the format YYYY-MM-DD and for current date conversion either null or new Date() can be passed as argumets along with mode.
 
     
-    # Input Formate => formateDate(date,mode) => formateDate("2020-04-15","DD-MM-YYYY")
+    # Input Formate => formatDate(date,mode) => formatDate("2020-04-15","DD-MM-YYYY")
 
 available modes and output
 
@@ -29,7 +29,7 @@ available modes and output
   
   # const date_formater = require('date_formater-js')
   
-  # const date = date_formater.formateDate(null,"DDMMMYYYY"); 
+  # const date = date_formater.formatDate(null,"DDMMMYYYY"); 
   **************************************************************
   # sample
   formatDate("2020-04-16","DDMMMYYYY")  will return date in formate 16 APR 2020
