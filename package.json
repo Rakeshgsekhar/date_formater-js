@@ -30,7 +30,7 @@
     "babel-plugin-istanbul": "^6.0.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "babel-preset-env": "^1.6.1",
-    "eslint": "^4.13.1",
+    "eslint": "^9.22.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
     "mocha": "^10.2.0",
